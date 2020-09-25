@@ -5,13 +5,13 @@ pipeline {
         stage('Verify Branch') {
             steps {
                 echo "$GIT_BRANCH"
+		}
 	    post { 
                success { 
                  echo 'Branch name printed successfully'
                       }
                  }
-            }
-        }
+               }
 	
 	stage('Docker Build') {
             steps {
